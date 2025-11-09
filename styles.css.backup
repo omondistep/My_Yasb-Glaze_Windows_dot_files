@@ -106,14 +106,8 @@
 .clock-grouper .container {
     padding: 0px 10px 0px 10px;
 }
-.utility-grouper .container {
-    padding: 0px 10px 0px 10px;
-}
 /* Widgets */
 .clock-widget .widget-container,
-.bluetooth-widget .widget-container,
-.notification-widget .widget-container,
-.wifi-widget .widget-container,
 .volume-widget .widget-container,
 .weather-widget .widget-container,
 .media-widget .widget-container,
@@ -125,7 +119,6 @@
 .windows-desktops .widget-container, 
 .screenshot-widget .widget-container,
 .clock-grouper .container,
-.utility-grouper .container,
 .showkeyboard-widget .widget-container,
 .brightness-widget .widget-container,
 .info-grouper .container,
@@ -135,7 +128,6 @@
 }
 .clock-grouper .container, 
 .info-grouper .container,
-.utility-grouper .container,
 .windows-desktops .widget-container {
     border-radius: 12px;
 }

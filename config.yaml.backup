@@ -35,15 +35,15 @@ bars:
       left: [
         "home",
         "glazewm_workspaces",
-        "active_window",
-        "media"
+        "active_window"
       ]
       center: [
         "info-grouper",
+        #"windows_workspaces",
         "clock-grouper"
       ]
       right: [
-        "utility-grouper"
+        "right-grouper"
         ]
 widgets:
   info-grouper:
@@ -55,7 +55,9 @@ widgets:
         "dotseparator",  
         "cpu",
         "memory",
-        "traffic"
+        "traffic",
+        "media",
+        "volume"
       ]
   clock-grouper:
     type: "yasb.grouper.GrouperWidget"
@@ -64,18 +66,18 @@ widgets:
       widgets: [
         "clock",
         "screenshot",
+        "brightness",
         "weather"
       ]
-  utility-grouper:
+  right-grouper:
     type: "yasb.grouper.GrouperWidget"
     options:
-      class_name: "utility-grouper"
+      class_name: "right-grouper"
       widgets: [
+        "dotseparator",
         "notifications",
-        "brightness",
         "wifi",
-        "bluetooth",
-        "volume"
+        "bluetooth"
       ]
   home:
     type: "yasb.home.HomeWidget"
@@ -223,6 +225,12 @@ widgets:
         update_interval_ms: 33
         style: "left"
         separator: ""
+  #windows_workspaces:
+    #type: "yasb.windows_desktops.WorkspaceWidget"
+    #options:
+      #label_workspace_btn: "\udb85\udcfc"         # All inactive workspaces show ①
+      #label_workspace_active_btn: "\udb85\udcfc"  # All active workspaces show Ⓐ
+      #animation: True
   clock:
     type: "yasb.clock.ClockWidget"
     options:
@@ -259,7 +267,7 @@ widgets:
       tooltip: True
       hide_unsupported: True
       brightness_toggle_level: [0, 50, 100]
-      auto_light: True
+      auto_light: False
       auto_light_icon: "\udb80\udce1"
       auto_light_night_level: 35
       auto_light_night_start_time: "19:00"
@@ -274,8 +282,8 @@ widgets:
       progress_bar:
         enabled: True
         position: 'left'
-        size: 18
-        thickness: 6
+        size: 22
+        thickness: 8
         color: '#d2e5f4'
         animation: True
       brightness_menu:
@@ -283,7 +291,7 @@ widgets:
         round_corners: True
         round_corners_type: "normal"
         border_color: "system"
-        alignment: "left"
+        alignment: "center"
         direction: "down"
       callbacks:
           on_left: "toggle_brightness_menu"
@@ -316,7 +324,7 @@ widgets:
         border_color: "system"
         alignment: "right"
         direction: "down"
-        icon_size: 30
+        icon_size: 40
         show_hourly_forecast: true
         time_format: "12h" 
         hourly_point_spacing: 68
@@ -498,7 +506,7 @@ widgets:
       active_empty_label: "\udb85\udcfc"
       
       # Workspace management (matching komorebi's hide_empty_workspaces)
-      hide_empty_workspaces: true
+      hide_empty_workspaces: false
       
       # Server connection
       glazewm_server_uri: "ws://localhost:6123"
