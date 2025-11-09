@@ -115,7 +115,6 @@
 .notification-widget .widget-container,
 .wifi-widget .widget-container,
 .volume-widget .widget-container,
-.weather-widget .widget-container,
 .media-widget .widget-container,
 .power-menu-widget .widget-container,
 .memory-widget .widget-container,
@@ -123,11 +122,9 @@
 .traffic-widget .widget-container,
 .microphone-widget .widget-container,
 .windows-desktops .widget-container, 
-.screenshot-widget .widget-container,
 .clock-grouper .container,
 .utility-grouper .container,
 .showkeyboard-widget .widget-container,
-.brightness-widget .widget-container,
 .info-grouper .container,
 .systray {
     background-color: var(--widget-background);
@@ -785,7 +782,7 @@
 .workspace-widget .icon:hover {
   color: var(--rosewater);
   transform: scale(1.1);
-  background-color: rgba(203, 166, 247, 0.08);
+  background-color: rgba(15, 168, 9, 0.08);
 }
 .workspace-widget .active {
   color: var(--accent-purple);

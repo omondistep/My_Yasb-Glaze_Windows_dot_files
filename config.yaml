@@ -34,13 +34,23 @@ bars:
     widgets:
       left: [
         "home",
+        "dotseparator", 
+        "launchpad",
+        "dotseparator", 
         "glazewm_workspaces",
         "active_window",
         "media"
       ]
       center: [
         "info-grouper",
-        "clock-grouper"
+        "clock-grouper",
+        "weather",
+        "dotseparator",
+        "brightness",
+        "dotseparator",
+        "screenshot",
+
+
       ]
       right: [
         "utility-grouper"
@@ -51,8 +61,6 @@ widgets:
     options:
       class_name: "info-grouper"
       widgets: [
-        "launchpad",
-        "dotseparator",  
         "cpu",
         "memory",
         "traffic"
@@ -63,8 +71,7 @@ widgets:
       class_name: "clock-grouper"
       widgets: [
         "clock",
-        "screenshot",
-        "weather"
+ 
       ]
   utility-grouper:
     type: "yasb.grouper.GrouperWidget"
@@ -72,7 +79,6 @@ widgets:
       class_name: "utility-grouper"
       widgets: [
         "notifications",
-        "brightness",
         "wifi",
         "bluetooth",
         "volume"
